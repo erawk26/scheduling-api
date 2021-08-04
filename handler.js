@@ -1,6 +1,6 @@
+require('dotenv').config({ path: './variables.env' });
 const connectToDatabase = require("./db");
 const Schedule = require("./models/Schedule");
-require('dotenv').config({ path: './.env' });
 
 ("use strict");
 
