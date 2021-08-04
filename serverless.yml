@@ -27,6 +27,7 @@ provider:
     timeout: 10 # the timeout is 10 seconds (default is 6 seconds)
     stage: dev # setting the env stage to dev, this will be visible in the routes
     region: us-east-1
+    lambdaHashingVersion: 20201221
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -47,7 +48,7 @@ provider:
 # you can define service wide environment variables here
 #  environment:
 #    variable1: value1
-
+useDotenv: true
 # you can add packaging information here
 #package:
 #  patterns:
