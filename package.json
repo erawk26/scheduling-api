@@ -8,9 +8,11 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "dotenv": "^10.0.0",
-    "mongoose": "^5.13.5",
+    "mongoose": "^5.13.5"
+  },
+  "devDependencies": {
     "serverless-offline": "^8.0.0"
   }
 }
