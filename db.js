@@ -13,6 +13,8 @@ module.exports = connectToDatabase = () => {
     .connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useFindAndModify: false,
+      useCreateIndex: true,
     })
     .then((db) => {
       isConnected = db.connections[0].readyState;
