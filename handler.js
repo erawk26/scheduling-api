@@ -87,7 +87,7 @@ module.exports.update = (event, context, callback) => {
         callback(null, {
           statusCode: 200,
           headers: header,
-          body: JSON.stringify(schedule),
+          body: JSON.stringify({ ...schedule, modified: Date.now() }),
         })
       )
       .catch((err) =>

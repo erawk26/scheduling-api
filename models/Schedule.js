@@ -12,5 +12,14 @@ const ScheduleSchema = new mongoose.Schema({
   schedule: Array,
   datesArr: Array,
   comments: String,
+  created: { type: Date, default: Date.now },
+  modified: Date,
+});
+ScheduleSchema.set("toJSON", {
+  transform: (document, returnedObject) => {
+    returnedObject.id = returnedObject._id.toString();
+    delete returnedObject._id;
+    delete returnedObject.__v;
+  },
 });
 module.exports = mongoose.model("Schedule", ScheduleSchema);
